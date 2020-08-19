@@ -1,0 +1,14 @@
+$green:                    #37A000;
+$white:                    #ffffff;
+$gray:                     #F1F1F1;
+$gray-light:               #dcdcdc;
+$gray-dark:                #6C6969;
+$text:                     #332E2E;
+
+$body-color:  $text;
+
+$theme-colors: (
+  "primary":    $green,
+  "secondary":  $gray-light,
+  "dark":       $gray-dark,
+);

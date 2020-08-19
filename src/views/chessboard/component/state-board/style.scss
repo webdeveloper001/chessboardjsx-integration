@@ -1,0 +1,80 @@
+@import "../../../../bootstrap_customize.scss";
+
+.state-board {
+  .history {
+    background-color: $white;
+    .time {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      label {
+        font-size: 32px;
+      }
+    }
+    .count-down {
+      background-color: $green;
+      text-align: center;
+      color: $white;
+    }
+    .player-item {
+      .status {
+        color: $gray-dark;
+        &.online {
+          color: $green;
+        }
+      }
+      .length-icon {
+        svg {
+          height: 25px;
+        }
+      }
+    }
+    .player-history {
+      >div:nth-child(odd) {
+        background-color: $gray;
+      }
+      .item {
+        div {
+          width: 20%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .operations {
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      flex: 1;
+    }
+  }
+  .chatroom {
+    > div {
+      background-color: $white;
+      margin-bottom: 2px;
+    }
+    .chat-history {
+      height: 100px;
+      overflow-y: auto;
+      .message {
+        display: inline-block;
+        background-color: $gray;
+        padding: 5px 12px;
+        border-radius: 5px;
+      }
+    }
+    .message-input {
+      position: relative;
+      input {
+        width: 100%;
+        border: none;
+        padding: 10px 15px;
+      }
+      .send-btn {
+        position: absolute;
+        right: 14px;
+        top: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../bootstrap_customize.scss';
+
+.chessboard {
+  margin-top: 38px;
+  .board-wrapper {
+    padding: 32px;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+  }
+}

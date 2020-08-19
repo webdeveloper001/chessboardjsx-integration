@@ -1,25 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import  {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
+import store from './store';
+import Wizard from './views/wizard'
+import Chessboard from './views/chessboard'
+import Header from './components/header'
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Header />
+      <div className="container">
+        <Router>
+          <Switch>
+            <Route
+              path="/wizard"
+              component={Wizard}
+            />
+            <Route
+              path="/chessboard"
+              component={Chessboard}
+            />
+            <Route
+              path=''
+              exact
+              component={()=><Redirect to='/wizard'/>}
+            />
+          </Switch>
+        </Router>
+      </div>
+    </Provider>
   );
 }
 

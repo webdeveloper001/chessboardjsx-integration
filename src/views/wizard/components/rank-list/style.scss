@@ -1,0 +1,41 @@
+@import '../../../../bootstrap_customize.scss';
+
+.rank-list {
+  .filter-wrapper {
+    display: flex;
+    .filter-item {
+      flex: 1;
+      text-align: center;
+      cursor: pointer;
+      &.active {
+        background-color: $white;
+      }
+    }
+  }
+  .list-table {
+    >div:nth-child(odd) {
+      background-color: $white;
+    }
+    .rank-place {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      span {
+        position: absolute;
+        left: 11px;
+        top: 4px;
+      }
+    }
+    .status {
+      color: $gray-dark;
+      &.online {
+        color: $green;
+      }
+    }
+    .length-icon {
+      svg {
+        height: 25px;
+      }
+    }
+  }
+}

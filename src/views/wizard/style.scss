@@ -1,0 +1,40 @@
+@import '../../bootstrap_customize.scss';
+
+.wizard {
+  margin-top: 38px;
+  .step-wrapper {
+    padding: 38px;
+    background-color: $white;
+    text-align: center;
+    .step-title {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .step-description {
+      font-size: 14px;
+    }
+
+    .wager-input {
+      position: relative;
+      width: 80%;
+      margin: auto;
+      input {
+        width: 100%;
+        background-color: $gray;
+        border: none;
+        margin-bottom: 32px;
+        font-size: 80px;
+        font-weight: lighter;
+        padding-left: 69px;
+      }
+      &:before {
+        content: '$';
+        font-size: 45px;
+        font-weight: lighter;
+        position: absolute;
+        left: 31px;
+        top: 18px;
+      }
+    }
+  }
+}
