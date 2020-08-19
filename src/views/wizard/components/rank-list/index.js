@@ -1,6 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import CountryFlag from "react-country-flag"
+
+import fontawesome from '@fortawesome/fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+
 import { Gray } from '../../../../colors'
 import FavoriteIcon from '../../../../components/icons/Favorite'
 import LengthBullet from '../../../../components/icons/LengthBullet'
@@ -10,6 +15,8 @@ import RankPlaceIcon from '../../../../components/icons/RankPlace'
 import { RankColors } from '../../../../colors'
 import actions from '../../../../store/rank/actions'
 import './style.scss'
+
+fontawesome.library.add(faChevronLeft, faChevronRight);
 
 const LengthIcons = {
   bullet: LengthBullet,
@@ -67,7 +74,7 @@ const RankList = ({
                 : null}
                 <span>{idx+1}</span>
               </div>
-              <div className="mx-2">
+              <div className="mx-3 flag">
                 <CountryFlag svg countryCode={user.country} />
               </div>
               <div>
@@ -86,6 +93,14 @@ const RankList = ({
             </div>
           )
         })}
+        <div className="d-flex justify-content-between align-items-center py-3 px-4">
+          <FontAwesomeIcon icon="chevron-left" />
+          <span className="mx-4">
+            <label className="mb-0 h5">1</label>
+            &nbsp;/ 6
+          </span>
+          <FontAwesomeIcon icon="chevron-right" />
+        </div>
       </div>
     </div>
   )

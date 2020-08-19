@@ -94,7 +94,7 @@ const Player = ({
   const StarIcon = user.faborite ? FavoriteIcon : null
   return (
     <div key={user.id} className="d-flex align-items-center py-3 px-4 player-item">
-      <div className="mx-2">
+      <div className="mx-2 flag">
         <CountryFlag svg countryCode={user.country} />
       </div>
       <div>

@@ -29,7 +29,7 @@ const Stepper = ({
               }
             }}
           >
-            <span className={`step-icon mr-1 ${completed||current?'completed':''}`}>
+            <span className={`step-icon mr-2 ${completed||current?'completed':''}`}>
               {completed && currentStep !== sidx
                 ? <FontAwesomeIcon icon="check" />
                 : sidx + 1

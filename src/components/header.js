@@ -30,7 +30,9 @@ const UserPill = React.forwardRef(({ children, onClick }, ref) => (
 const Header = ({ user }) => {
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand>Logotype</Navbar.Brand>
+      <Navbar.Brand>
+        <strong>LOGOTYPE</strong>
+      </Navbar.Brand>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link className="d-flex align-items-center">
