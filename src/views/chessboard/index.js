@@ -12,7 +12,7 @@ import "./style.scss"
 fontawesome.library.add(faExternalLinkSquareAlt)
 
 const ChessBoard = () => {
-  const [ fullScreen, setFullScreen ] = useState(true)
+  const [ fullScreen, setFullScreen ] = useState(false)
 
   return (
     <div className="row chessboard">

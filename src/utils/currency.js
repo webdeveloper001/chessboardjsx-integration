@@ -4,7 +4,8 @@ function formatMoney(number, decPlaces, decSep, thouSep) {
   thouSep = typeof thouSep === "undefined" ? "," : thouSep;
   var sign = number < 0 ? "-" : "";
   var i = String(parseInt(number = Math.abs(Number(number) || 0).toFixed(decPlaces)));
-  var j = (j = i.length) > 3 ? j % 3 : 0;
+  var j = i.length
+  j = j > 3 ? j % 3 : 0;
   
   return sign +
     (j ? i.substr(0, j) + thouSep : "") +
