@@ -76,7 +76,7 @@ const StateBoard = ({
       </div>
       <div className="chatroom">
         <div className="w-50">
-          <FontAwesomeIcon icon="comment" className="mr-2" />
+          <FontAwesomeIcon icon="comment" className="mx-2" />
           Chat room
         </div>
         <div className="chat-history p-3">
