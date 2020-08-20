@@ -25,6 +25,7 @@ fontawesome.library.add(faPlus, faCross, faHandPaper, faComment, faTimes,
   faFlag, faExternalLinkSquareAlt, faPaperPlane);
 
 const StateBoard = ({
+  setFullScreen,
   player1,
   player2,
   player1history,
@@ -64,13 +65,18 @@ const StateBoard = ({
         <button className="btn btn-secondary mr-2">
           <FontAwesomeIcon icon="flag" />
         </button>
-        <button className="btn btn-secondary">
+        <button
+          className="btn btn-secondary"
+          onClick={() => {
+            setFullScreen(true)
+          }}
+        >
           <FontAwesomeIcon icon="external-link-square-alt" />
         </button>
       </div>
       <div className="chatroom">
         <div className="w-50">
-          <FontAwesomeIcon icon="comment" />
+          <FontAwesomeIcon icon="comment" className="mr-2" />
           Chat room
         </div>
         <div className="chat-history p-3">

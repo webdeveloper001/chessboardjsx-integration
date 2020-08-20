@@ -18,23 +18,38 @@
       position: relative;
       width: 80%;
       margin: auto;
+      .input-wrapper {
+        position: relative;
+        margin-bottom: 32px;
+        &:before {
+          content: '$';
+          font-size: 45px;
+          font-weight: lighter;
+          position: absolute;
+          left: 31px;
+          top: 18px;
+          color: $gray-dark;
+        }
+        .spin-handle {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          position: absolute;
+          right: 20px;
+          top: 0;
+          bottom: 0;
+          font-size: 2em;
+          color: $gray-dark;
+        }
+      }
       input {
         width: 100%;
         background-color: $gray;
         border: none;
-        margin-bottom: 32px;
         font-size: 80px;
         font-weight: 100;
         font-family: Roboto;
         padding-left: 69px;
-      }
-      &:before {
-        content: '$';
-        font-size: 45px;
-        font-weight: lighter;
-        position: absolute;
-        left: 31px;
-        top: 18px;
       }
     }
   }

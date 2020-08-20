@@ -28,6 +28,7 @@ const items = [
 
 const SelectPiece = ({
   piece,
+  length,
   playerMinutes,
   moveSeconds,
   setPiece,
@@ -42,27 +43,30 @@ const SelectPiece = ({
         value={piece}
         onChange={setPiece}
         items={items}
+        showChecker
       />
-      <div className="row mt-4">
-        <div className="col">
-          <p>How long per player (minutes): 0</p>
-          <Form.Control
-            type="range"
-            custom
-            value={playerMinutes}
-            onChange={ev => setPlayerMinutes(ev.target.value)}
-          />
+      {length === 'custom' && (
+        <div className="row mt-4">
+          <div className="col">
+            <p>How long per player (minutes): {playerMinutes}</p>
+            <Form.Control
+              type="range"
+              custom
+              value={playerMinutes}
+              onChange={ev => setPlayerMinutes(ev.target.value)}
+            />
+          </div>
+          <div className="col">
+            <p>Additional seconds per move: {moveSeconds}</p>
+            <Form.Control
+              type="range"
+              custom
+              value={moveSeconds}
+              onChange={ev => setMoveSeconds(ev.target.value)}
+            />
+          </div>
         </div>
-        <div className="col">
-          <p>Additional seconds per move: 0</p>
-          <Form.Control
-            type="range"
-            custom
-            value={moveSeconds}
-            onChange={ev => setMoveSeconds(ev.target.value)}
-          />
-        </div>
-      </div>
+      )}
       <button
         className="btn btn-primary btn-block mt-5"
         onClick={() => {
@@ -76,6 +80,7 @@ const SelectPiece = ({
 }
 
 export default withRouter(connect(state => ({
+  length: state.Wizard.length,
   piece: state.Wizard.piece,
   playerMinutes: state.Wizard.playerMinutes,
   moveSeconds: state.Wizard.moveSeconds

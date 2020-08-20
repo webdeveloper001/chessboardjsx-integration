@@ -12,6 +12,7 @@ import { faVolumeUp, faMicrophone, faSun, faChevronRight } from '@fortawesome/fr
 
 import FavoriteIcon from '../components/icons/Favorite'
 import DollarIcon from '../components/icons/Dollar'
+import { formatMoney } from '../utils/currency'
 
 fontawesome.library.add(faVolumeUp, faMicrophone, faSun, faChevronRight);
 
@@ -41,7 +42,7 @@ const Header = ({ user }) => {
           </Nav.Link>
           <Nav.Link className="d-flex align-items-center">
             <DollarIcon/>
-            <span className="ml-2">{user.amount}</span>
+            <span className="ml-2">{formatMoney(user.amount)}</span>
           </Nav.Link>
           <Dropdown>
             <Dropdown.Toggle as={UserPill}>

@@ -2,10 +2,16 @@
 
 .chessboard {
   margin-top: 38px;
+  .fullscreen-count-down {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: bold;
+  }
   .board-wrapper {
     padding: 32px;
     background-color: $white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
